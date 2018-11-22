@@ -4,30 +4,20 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main (void){
-	FILE *fp, *fp2;
-	char input;
-	char original[100];
-	char copy[100];
-	int i=0;
+	FILE *fp;
+	char input[100];
+	int i;
 	
-	printf("original file: ");
-	scanf("%s", original);
-	printf("copy file: ");
-	scanf("%s", copy);
+	fp=fopen("samle.txt","w");
 	
-	fp= fopen(original, "r");
-	fp2= fopen(copy,"w");
-	
-	while( (input = fgetc(fp)) != EOF)
+	for (i=0;i<3;i++)
 	{
-		fputc(input,fp2);
-		i++;
+		printf("input a word : ");
+		scanf("%s", input);
+		fprintf(fp, "%s\n", input);
 	}
 	
-	printf("Copy succeed~ (%i Bytes copied)\n", i);
-	
 	fclose(fp);
-	fclose(fp2);
 	
 	return 0;
 }
