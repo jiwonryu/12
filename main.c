@@ -11,12 +11,12 @@ int main (void){
 	
 	while ( src[i] != '\0')
 	{
-		dst[i] = src[i];
+	//	dst[i] = src[i];
 		i++;
 	}
-	dst[i]='\0';
+	// dst[i]='\0';
 	
-	printf("dst : %n", dst);
+	printf("문자열\"%s\"의 길이 : %i" , src, i);
 	
 	return 0;
 }
