@@ -6,17 +6,17 @@
 
 int main (void){
 	char src[100] = "Programming course";
-	char dst[100];
-	int i=0;
+	//char dst[100];
+	//int i=0;
 	
-	while ( src[i] != '\0')
+	/*while ( src[i] != '\0')
 	{
-	//	dst[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	// dst[i]='\0';
+		dst[i]='\0';*/
 	
-	printf("문자열\"%s\"의 길이 : %i" , src, i);
+	printf("문자열\"%s\"의 길이 : %i" , src, strlen(src));
 	
 	return 0;
 }
