@@ -1,21 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main (void){
 	FILE *fp;
-	char input[100];
-	int i;
+	char input;
 	
-	fp= fopen("sample.tst","w");
+	fp= fopen("sample.tst","r");
 	
-	for (i=0;i<3;i++)
+	while ( (input = fgetc(fp)) != EOF )
 	{
-		printf("input a word : ");
-		scanf("%s",input);
-		fprintf(fp, "%s\n", input);
+		putchar(input);
 	}
 	
 	fclose(fp);
