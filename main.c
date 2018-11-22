@@ -5,13 +5,13 @@
 
 int main (void){
 	FILE *fp;
-	char input;
+	char input[100];
 	
 	fp= fopen("sample.tst","r");
 	
-	while ( (input = fgetc(fp)) != EOF )
+	while ( fgets(input, 100, fp) != NULL)
 	{
-		putchar(input);
+		printf(input);
 	}
 	
 	fclose(fp);
